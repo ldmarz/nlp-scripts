@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_store
+
+# Local development settings
+/.env
+/.vscode
+/.idea
+
+# Dependency directories
+venv/
+env/
+env.bak/
+
+# Distribution directories
+dist/
+build/
+*.egg-info/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite3
+
+# Ignore specific files
+config/config.py
+config/credentials.json
+transcripts/
+uploads/
+downloads/
+embeddings/
+node_modules/
+checkpoints/
+input/*
+
+*.png
