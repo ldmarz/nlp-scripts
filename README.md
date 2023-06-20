@@ -27,6 +27,10 @@ The `license_plate_extraction.py` script demonstrates how to use Langchain to ex
 
 The `sentiment_analysis.py` script demonstrates how to use a sentiment analysis pipeline to analyze the sentiment of a series of questions in a CSV file. The script uses a model fine-tuned for Portuguese to determine whether the sentiment of each question is positive or negative. The results are saved to a new CSV file, and the overall sentiment and sentiment per item are printed.
 
+### Zero-Shot Classification
+
+The zero_shot_classifier.py script applies a zero-shot classification pipeline with the facebook/bart-large-mnli model to classify text inputs into multiple categories. The model assesses the likelihood of each input belonging to predefined categories and assigns it to those that exceed a specified confidence threshold. The output is a CSV file where each text input is accompanied by its assigned categories and corresponding confidence scores.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request.
