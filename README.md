@@ -6,6 +6,7 @@ This repository contains various scripts for testing the features of Langchain, 
 
 - [License Plate Extraction](#license-plate-extraction)
 - [Sentiment Analysis](#sentiment-analysis)
+- [Zero-Shoot classification](#Zero-Shot-Classification)
 
 ## Getting Started
 
