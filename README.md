@@ -1,6 +1,6 @@
-# Langchain Testing Repository
+# NLP Testing Repository
 
-This repository contains various scripts for testing the features of Langchain, a powerful tool for natural language processing tasks.
+This repository contains various scripts for testing differents NLP techniques.
 
 ## Contents
 
