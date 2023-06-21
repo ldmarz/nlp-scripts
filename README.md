@@ -1,11 +1,12 @@
-# Langchain Testing Repository
+# NLP Testing Repository
 
-This repository contains various scripts for testing the features of Langchain, a powerful tool for natural language processing tasks.
+This repository contains various scripts for testing differents NLP techniques.
 
 ## Contents
 
 - [License Plate Extraction](#license-plate-extraction)
 - [Sentiment Analysis](#sentiment-analysis)
+- [Zero-Shoot classification](#Zero-Shot-Classification)
 
 ## Getting Started
 
