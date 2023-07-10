@@ -3,6 +3,9 @@ import os
 from tqdm import tqdm
 from transformers import pipeline
 
+OUTPUT_FILE = "../output/sentiment_analysis.csv"
+INPUT_TO_ANALYZE = "../input/text_to_analyze.csv"
+
 # Setup
 os.environ["TRANSFORMERS_CACHE"] = "./models"
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
@@ -10,6 +13,9 @@ candidate_labels = ["Product Availability", "Financing",
                     "Viewing/Visiting", "Price", "Miscellaneous/Other", "Whatsapp/Wap", "Communicating", "Video"]
 
 def classify_sequence(sequence, threshold=50):
+    if sequence == "":
+        return {label: 0 for label in candidate_labels}
+
     # classify the sequence using the model
     result = classifier(sequence, candidate_labels, multi_label=True)
 
@@ -25,13 +31,14 @@ def classify_sequence(sequence, threshold=50):
 
     return labels_scores
 
+
 def main():
-    with open("../input/text_to_analize.csv", "r") as input_file:
+    with open(INPUT_TO_ANALYZE, "r") as input_file:
         reader = list(csv.reader(input_file))
         total_rows = len(reader)
 
-    with open("../input/text_to_analize.csv", "r") as input_file, open("../output/sentiment_analysis.csv", "w",
-                                                                       newline="") as output_file:
+    with open(INPUT_TO_ANALYZE, "r") as input_file, open(OUTPUT_FILE, "w",
+                                                         newline="") as output_file:
         reader = csv.reader(input_file)
         writer = csv.writer(output_file)
 
@@ -49,6 +56,7 @@ def main():
                 pbar.set_postfix_str(f"Processing row: {pbar.n + 1}, Labels: {','.join(labels_scores.keys())}",
                                      refresh=True)
                 pbar.update()
+
 
 if __name__ == "__main__":
     main()
