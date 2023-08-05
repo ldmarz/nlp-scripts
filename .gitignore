@@ -34,5 +34,7 @@ embeddings/
 node_modules/
 checkpoints/
 input/*
+src/models/*
+*.csv
 
 *.png
