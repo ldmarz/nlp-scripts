@@ -7,6 +7,7 @@ This repository contains various scripts for testing differents NLP techniques.
 - [License Plate Extraction](#license-plate-extraction)
 - [Sentiment Analysis](#sentiment-analysis)
 - [Zero-Shoot classification](#Zero-Shot-Classification)
+- [Embeddings with OpenAI](#Embeddings with OpenAI)
 
 ## Getting Started
 
@@ -31,6 +32,9 @@ The `sentiment_analysis.py` script demonstrates how to use a sentiment analysis 
 ### Zero-Shot Classification
 
 The zero_shot_classifier.py script applies a zero-shot classification pipeline with the facebook/bart-large-mnli model to classify text inputs into multiple categories. The model assesses the likelihood of each input belonging to predefined categories and assigns it to those that exceed a specified confidence threshold. The output is a CSV file where each text input is accompanied by its assigned categories and corresponding confidence scores.
+
+### Embeddings with OpenAI
+The embeddings_openai.py script demonstrates how to generate embeddings for text using OpenAI's API. It uses the OpenAI SDK to fetch embeddings for a set of example texts. The script then uses cosine similarity to find the most similar text from the examples to a given query. This approach showcases the capability of embeddings to capture semantic meaning and find related content based on context.
 
 ## Contributing
 
